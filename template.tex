@@ -1,0 +1,106 @@
+\documentclass[final]{article}
+\usepackage{skak}
+\usepackage{exercise}
+\usepackage{tcolorbox}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+\usepackage{sagetex}
+\usepackage[margin=1in]{geometry}
+
+\usepackage[per-mode = fraction]{siunitx}
+\usepackage{amsmath}
+\usepackage{lmodern}
+\usepackage{tikz}
+
+\usepackage{float}
+\usepackage{tkz-base}
+\usepackage{circuitikz}
+\usepackage{tkz-euclide}
+\usepackage{witharrows}
+\usepackage{newpxtext}
+\usepackage[]{minted}
+\usepackage{tkz-graph}
+\usepackage{algorithm2e}
+\usepackage{graphicx}
+
+
+\usepackage{tzplot}
+\usepackage[dvipsnames, svgnames, x11names]{xcolor}
+\usepackage[colorlinks=true, linkcolor=DeepPink]{hyperref}
+\usepackage[nameinlink]{cleveref}
+
+\allowdisplaybreaks
+\tikzset{>=to}
+\renewcommand{\mark}[2]{(\textbf{#1#2})}
+
+\tcbuselibrary{skins}
+\tcbuselibrary{breakable}
+\newtcolorbox[auto counter, number within=section]{theorem}{
+    enhanced,
+    breakable,
+    frame hidden,
+    parbox=false,
+    fonttitle={\sffamily \bfseries},
+    borderline west={1pt}{0mm}{color=ForestGreen},
+    %borderline south={1pt}{0mm}{color=ForestGreen}, coltitle=White,
+    colback=White,
+    attach boxed title to top left,
+    boxed title style={colback=ForestGreen, sharp corners, colframe=ForestGreen},
+    boxed title size=title,
+    title={Theorem \thetcbcounter},
+    overlay unbroken and last={
+        \node[left, text=ForestGreen, sharp corners,align=left ,  anchor=west, xshift=-2em] at (frame.west) {\Large \sffamily T};
+    }
+}
+\newtcolorbox[auto counter, number within=section]{definition}{
+    enhanced,
+    breakable,
+    frame hidden,
+    parbox=false,
+    fonttitle={\sffamily \bfseries},
+    borderline west={1pt}{0mm}{color=NavyBlue},
+    %borderline south={1pt}{0mm}{color=ForestGreen}, coltitle=White,
+    colback=White,
+    attach boxed title to top left,
+    boxed title style={colback=NavyBlue, sharp corners, colframe=NavyBlue},
+    boxed title size=title,
+    title={Definition \thetcbcounter},
+    overlay unbroken and last={
+        \node[left, text=NavyBlue, sharp corners,align=left ,  anchor=west, xshift=-2em] at (frame.west) {\Large \sffamily D};
+    }
+}
+\newtcolorbox[auto counter, number within=section]{example}{
+    enhanced,
+    breakable,
+    frame hidden,
+    parbox=false,
+    fonttitle={\sffamily \bfseries},
+    borderline west={1pt}{0mm}{color=DarkOrchid},
+    %borderline south={1pt}{0mm}{color=ForestGreen}, coltitle=White,
+    colback=White,
+    attach boxed title to top left,
+    boxed title style={colback=DarkOrchid, sharp corners, colframe=DarkOrchid},
+    boxed title size=title,
+    title={Example \thetcbcounter},
+    overlay unbroken and last={
+        \node[left, text=DarkOrchid, sharp corners,align=left ,  anchor=west, xshift=-2em] at (frame.west) {\Large \sffamily E};
+    }
+}
+
+\newcommand{\term}[1]{{\bf \color{BlueGreen} #1}}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\numberwithin{listing}{section}
+
+
+\title{TODO}
+\author{Dalton Ma}
+\begin{document}
+\begin{titlepage}
+\thispagestyle{empty}
+\maketitle
+\tableofcontents
+\listoffigures
+\listoflistings
+\end{titlepage}
+\end{document}
